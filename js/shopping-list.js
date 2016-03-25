@@ -1,8 +1,9 @@
 var ShoppingListItem = function(name, description){
 		this.name = name;
 		this.description = description;
-    this.isDone = false;
+    this.is_done = false;
 
 };
-
-ShoppingListItem.prototype.check = function(){};
+ShoppingListItem.prototype.check = function(){
+  return this.is_done = true;
+};
