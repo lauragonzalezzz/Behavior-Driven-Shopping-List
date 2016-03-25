@@ -1,10 +1,10 @@
 describe('ShoppingList', function(){
 
-  // var SL = null;
+  var SL = null;
 
-  // beforeEach(function() {
-  //   SL = new ShoppingList();
-  // });
+  beforeEach(function() {
+    SL = new ShoppingList();
+  });
 
 
   it('should be a function', function(){
@@ -32,10 +32,10 @@ describe('ShoppingList', function(){
       });
 
       it('addItem add Shopping List items to items array', function(){
-        var SL = new ShoppingList();
+        var SL2 = new ShoppingList();
         var grapes = new ShoppingListItem('grapes', 'are cute!')
-        SL.addItem(grapes);
-        expect(SL.items).to.include('grapes');
+        SL2.addItem(grapes);
+        expect(SL2.items).to.include(grapes);
       });
 
 
