@@ -65,6 +65,12 @@ describe('ShoppingListItem', function() {
         expect(SL.uncheck).to.be.a('function');
       });
 
+      it('should change is_done to false', function() {
+        expect(SL.uncheck()).to.be.false;
+      });
+
+
+
     }); //Ends Uncheck Method
 
   }); //Ends ShoppingListItem Methods
