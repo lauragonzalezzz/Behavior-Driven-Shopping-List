@@ -8,8 +8,3 @@ var ShoppingList = function(){
     return this.items.push(item);
   };
 };
-
-var SL = new ShoppingList();
-console.log(this.items);
-SL.addItem('hello');
-console.log('this.items',this.items);
