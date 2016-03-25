@@ -15,4 +15,7 @@ describe('ShoppingList', function(){
     expect(SL).to.have.property('items');
   });
 
+  it('items should be an array', function(){
+    expect(SL.items).to.be.an('array');
+  });
 });
