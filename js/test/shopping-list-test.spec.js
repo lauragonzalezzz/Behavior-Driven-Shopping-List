@@ -1,10 +1,10 @@
 describe('ShoppingList', function(){
 
-  var SL = null;
+  // var SL = null;
 
-  beforeEach(function() {
-    SL = new ShoppingList();
-  });
+  // beforeEach(function() {
+  //   SL = new ShoppingList();
+  // });
 
 
   it('should be a function', function(){
@@ -32,18 +32,22 @@ describe('ShoppingList', function(){
       });
 
       it('addItem add Shopping List items to items array', function(){
-        var SL1 = new ShoppingList();
-        SL1.addItem('grapes');
-        expect(SL1.items).to.deep.equal(['grapes']);
+        var SL = new ShoppingList();
+        var grapes = new ShoppingListItem('grapes', 'are cute!')
+        SL.addItem(grapes);
+        expect(SL.items).to.include('grapes');
       });
 
-      it('addItem should only add shopping list items', function(){
-        var SLItem = new ShoppingListItem();
 
-        var SL1 = new ShoppingList();
-        SL1.addItem('grapes');
-        expect(SL1.items).to.deep.equal(['grapes']);
-      });
+
+      // it('addItem should only add shopping list items', function(){
+      //   var SLItem = new ShoppingListItem();
+      //   SLItem.('grapes')
+
+      //   var SL1 = new ShoppingList();
+      //   SL1.addItem('grapes');
+      //   expect(SL1.items).to.deep.equal(['grapes']);
+      // });
 
 
     });
