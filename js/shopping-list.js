@@ -1,4 +1,5 @@
-var ShoppingListItem = function(name){
-		this.name = name;
+var ShoppingListItem = function(){
+		this.name = false;
+		this.description = false;
 
 };
