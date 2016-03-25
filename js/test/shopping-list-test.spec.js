@@ -53,9 +53,19 @@ describe('ShoppingListItem', function() {
         expect(SL.check()).to.be.true;
       });
 
-    }); //End of Check Method
+    }); //Ends Check Method
 
+    describe('Uncheck Method', function() {
 
+      it('should have an uncheck method', function() {
+        expect(SL.uncheck).to.exist;
+      });
+
+      it('should be a function', function() {
+        expect(SL.uncheck).to.be.a('function');
+      });
+
+    }); //Ends Uncheck Method
 
   }); //Ends ShoppingListItem Methods
 
