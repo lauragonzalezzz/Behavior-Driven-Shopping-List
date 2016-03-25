@@ -1,1 +1,3 @@
-var ShoppingList = function(){};
+var ShoppingList = function(){
+  this.items = true;
+};
