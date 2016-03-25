@@ -9,20 +9,32 @@ describe('ShoppingListItem', function() {
 		expect(ShoppingListItem).to.be.a('function');
 	});
 
+  // PROPERTIES
+    // NAME
+    	it('should have a name property', function() {
+    		expect(SL).to.have.property('name');
+    	});
 
-// NAME
-	it('should have a name property', function() {
-		expect(SL).to.have.property('name');
-	});
+    // DESCRIPTION
+    	it('should have a description property', function() {
+    		expect(SL).to.have.property('description');
+    	});
 
-// DESCRIPTION
-	it('should have a description property', function() {
-		expect(SL).to.have.property('description');
-	});
+    // IS DONE
+      it('should have an isDone property', function() {
+        expect(SL).to.have.property('isDone');
+      });
 
-// IS DONE
-  it('should have an isDone property', function() {
-    expect(SL).to.have.property('isDone');
-  });
+  // METHODS
+
+    it('should accept a name argument', function() {
+      var SL2 = new ShoppingListItem('Totally', 'Duh');
+      expect(SL2.name).to.equal('Totally');
+    });
+
+    it('should accept a description argument', function() {
+      var SL2 = new ShoppingListItem('Totally', 'Duh');
+      expect(SL2.description).to.equal('Duh');
+    });
 
 });
