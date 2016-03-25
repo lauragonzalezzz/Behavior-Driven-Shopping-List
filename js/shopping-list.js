@@ -10,5 +10,5 @@ ShoppingListItem.prototype.check = function(){
 };
 
 ShoppingListItem.prototype.uncheck = function(){
-
+  return this.is_done = false;
 };
