@@ -57,6 +57,7 @@ describe('ShoppingListItem', function() {
 
     describe('Uncheck Method', function() {
 
+
       it('should have an uncheck method', function() {
         expect(SL.uncheck).to.exist;
       });
@@ -69,6 +70,19 @@ describe('ShoppingListItem', function() {
         expect(SL.uncheck()).to.be.false;
       });
 
+
+    }); //Ends Uncheck Method
+
+    describe('Render Method', function() {
+
+
+      it('should have a render method', function() {
+        expect(SL.render).to.exist;
+      });
+
+      it('should be a function', function() {
+        expect(SL.render).to.be.a('function');
+      });
 
 
     }); //Ends Uncheck Method
