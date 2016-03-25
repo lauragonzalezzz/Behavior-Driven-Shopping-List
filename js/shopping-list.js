@@ -1,6 +1,6 @@
-var ShoppingListItem = function(){
-		this.name = false;
-		this.description = false;
+var ShoppingListItem = function(name, description){
+		this.name = name;
+		this.description = description;
     this.isDone = false;
 
 };
