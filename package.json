@@ -4,7 +4,7 @@
   "description": "Fork and clone this project.   Goal: Create a working, single page app.",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha"
+    "test": "browser-sync start --server --files --index tests.html \"js/test/*.js\""
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,7 @@
   "homepage": "https://github.com/lauragonzalezzz/Behavior-Driven-Shopping-List#readme",
   "devDependencies": {
     "chai": "^3.5.0",
+    "livereload-js": "^2.2.2",
     "mocha": "^2.4.5"
   }
 }
