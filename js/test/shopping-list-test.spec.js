@@ -27,6 +27,8 @@ describe('ShoppingListItem', function() {
 
   // METHODS
 
+  describe('ShoppingListItem Methods', function(){
+
     it('should accept a name argument', function() {
       var SL2 = new ShoppingListItem('Totally', 'Duh');
       expect(SL2.name).to.equal('Totally');
@@ -37,4 +39,14 @@ describe('ShoppingListItem', function() {
       expect(SL2.description).to.equal('Duh');
     });
 
-});
+    it('should have a check method', function(){
+      expect(SL.check).to.exist;
+    });
+
+
+  }); //Ends ShoppingListItem Methods
+
+
+
+
+}); //Ends ShoppingListItem Suite
