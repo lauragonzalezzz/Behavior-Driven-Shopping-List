@@ -84,6 +84,16 @@ describe('ShoppingListItem', function() {
         expect(SL.render).to.be.a('function');
       });
 
+      it('should return a string', function(){
+        expect(SL.render()).to.be.a('string');
+      });
+
+      var SL3 = new ShoppingListItem('Grapes', 'are happy little things');
+      SL3.uncheck();
+      it('should return an html formatted string with populated values', function(){
+        expect(SL3.render()).to.equal("<ul><li class='completed_false'><span>Grapes</span><span>are happy little things.</span></li><ul>");
+      });
+
 
     }); //Ends Uncheck Method
 
