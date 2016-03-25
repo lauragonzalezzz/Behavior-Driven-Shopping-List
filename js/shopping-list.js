@@ -4,6 +4,11 @@ var ShoppingListItem = function(name, description){
     this.is_done = false;
 
 };
+
 ShoppingListItem.prototype.check = function(){
   return this.is_done = true;
+};
+
+ShoppingListItem.prototype.uncheck = function(){
+
 };
