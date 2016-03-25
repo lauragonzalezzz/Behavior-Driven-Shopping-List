@@ -20,6 +20,9 @@ describe('ShoppingListItem', function() {
 		expect(SL).to.have.property('description');
 	});
 
-
+// IS DONE
+  it('should have an isDone property', function() {
+    expect(SL).to.have.property('isDone');
+  });
 
 });
