@@ -21,8 +21,8 @@ describe('ShoppingListItem', function() {
     	});
 
     // IS DONE
-      it('should have an isDone property', function() {
-        expect(SL).to.have.property('isDone');
+      it('should have an is_done property', function() {
+        expect(SL).to.have.property('is_done');
       });
 
   // METHODS
@@ -39,9 +39,22 @@ describe('ShoppingListItem', function() {
       expect(SL2.description).to.equal('Duh');
     });
 
-    it('should have a check method', function(){
-      expect(SL.check).to.exist;
-    });
+    describe('Check Method', function() {
+
+      it('should have a check method', function(){
+        expect(SL.check).to.exist;
+      });
+
+      it('should be a function', function(){
+        expect(SL.check).to.be.a('function');
+      });
+
+      it('should set is_done to true', function(){
+        expect(SL.check()).to.be.true;
+      });
+
+    }); //End of Check Method
+
 
 
   }); //Ends ShoppingListItem Methods
