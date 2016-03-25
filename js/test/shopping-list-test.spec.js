@@ -1,6 +1,9 @@
 
 describe('ShoppingListItem', function() {
-
+  var SL = null;
+  beforeEach(function() {
+    SL = new ShoppingListItem();
+  });
 
 	it ('should be a function', function() {
 		expect(ShoppingListItem).to.be.a('function');
@@ -9,10 +12,14 @@ describe('ShoppingListItem', function() {
 
 // NAME
 	it('should have a name property', function() {
-		var SL = new ShoppingListItem();
 		expect(SL).to.have.property('name');
-		var SL2 = new ShoppingListItem('happy');
-		expect(SL2.name).to.equal('happy');
 	});
+
+// DESCRIPTION
+	it('should have a description property', function() {
+		expect(SL).to.have.property('description');
+	});
+
+
 
 });
