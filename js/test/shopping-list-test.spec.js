@@ -18,4 +18,16 @@ describe('ShoppingList', function(){
   it('items should be an array', function(){
     expect(SL.items).to.be.an('array');
   });
+
+  describe('Methods', function(){
+
+    it('should have an addItem method', function(){
+      expect(SL.addItem).to.exist;
+    });
+
+    it('addItem should be a function', function(){
+      expect(SL.addItem).to.be.a('function');
+    });
+
+  });
 });
