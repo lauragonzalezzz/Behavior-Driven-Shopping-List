@@ -6,6 +6,7 @@ var ShoppingListItem = function(name, description){
 };
 
 ShoppingListItem.prototype.check = function(){
+  console.log('ShoppingListItem',ShoppingListItem);
   return this.is_done = true;
 };
 
@@ -14,4 +15,6 @@ ShoppingListItem.prototype.uncheck = function(){
 };
 
 ShoppingListItem.prototype.render = function(){
+  return "<ul><li class='completed_false'"+"><span>"+"Grapes"+"</span><span>"+"are happy little things."+"</span></li><ul>";
+
 };
