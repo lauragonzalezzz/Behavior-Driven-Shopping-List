@@ -31,24 +31,21 @@ describe('ShoppingList', function(){
         expect(SL.addItem).to.be.a('function');
       });
 
-      it('addItem add Shopping List items to items array', function(){
+      it('addItem add shopping list items to items array', function(){
         var SL2 = new ShoppingList();
         var grapes = new ShoppingListItem('grapes', 'are cute!')
         SL2.addItem(grapes);
         expect(SL2.items).to.include(grapes);
       });
 
+      it('addItem should only add shopping list items', function(){
+        var SL1 = new ShoppingList();
+        expect(SL1.addItem.bind(SL1, 'not an item').to.throw(Error));
+      });
 
-
-      // it('addItem should only add shopping list items', function(){
-      //   var SLItem = new ShoppingListItem();
-      //   SLItem.('grapes')
-
-      //   var SL1 = new ShoppingList();
-      //   SL1.addItem('grapes');
-      //   expect(SL1.items).to.deep.equal(['grapes']);
+      // it('should throw an error if argument is not a ShoppingListItem', function () {
+      // expect(function () { SL.addItem('not an item'); }).to.throw(Error);
       // });
-
 
     });
 
