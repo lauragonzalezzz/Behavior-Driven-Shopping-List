@@ -6,7 +6,6 @@ var ShoppingListItem = function(name, description){
 };
 
 ShoppingListItem.prototype.check = function(){
-  console.log('ShoppingListItem',ShoppingListItem);
   return this.is_done = true;
 };
 
