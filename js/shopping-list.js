@@ -25,5 +25,7 @@ var ShoppingList = function(){
     };
   };
 
-  this.render = function(){};
+  this.render = function(){
+    return '';
+  };
 };
