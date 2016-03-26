@@ -7,4 +7,6 @@ var ShoppingList = function(){
     }
     return this.items.push(item);
   };
+
+  this.removeItem = function(){};
 };
