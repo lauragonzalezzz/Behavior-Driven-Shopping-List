@@ -32,15 +32,15 @@ describe('Shopping List', function(){
       });
 
       it('addItem add shopping list items to items array', function(){
-        var SL2 = new ShoppingList();
+        var SL1 = new ShoppingList();
         var grapes = new ShoppingListItem('grapes', 'are cute!')
-        SL2.addItem(grapes);
-        expect(SL2.items).to.include(grapes);
+        SL1.addItem(grapes);
+        expect(SL1.items).to.include(grapes);
       });
 
       it('addItem should only add shopping list items', function(){
-        var SL1 = new ShoppingList();
-        expect(SL1.addItem.bind(SL1, 'not an item')).to.throw(Error);
+        var SL2 = new ShoppingList();
+        expect(SL2.addItem.bind(SL2, 'not an item')).to.throw(Error);
       });
 
     }); //Ends Add Item Method
@@ -51,7 +51,25 @@ describe('Shopping List', function(){
         expect(SL.removeItem).to.exist;
       });
 
+      // it('should remove an item from the items array', function(){
+      //   var SL3 = new ShoppingList();
+      //   var carrots = new ShoppingListItem('carrots', 'are delicious!')
+      //   SL3.addItem(carrots);
+      //   expect(SL3.items).to.include(carrots);
+      //   SL3.removeItem(carrots);
+      //   expect(SL3.items).to.not.include(carrots);
+      // });
 
+      it('should remove the last item from the items array', function(){
+        var SL4 = new ShoppingList();
+        var banana = new ShoppingListItem('banana', 'is yellow.');
+        var cereal = new ShoppingListItem('cereal', 'is not always for breakfast.');
+
+        SL4.addItem(banana);
+        SL4.addItem(cereal);
+        SL4.removeItem();
+        expect(SL4.items).to.not.include(cereal);
+      });
 
     }); //Ends Remove Item Method
 
