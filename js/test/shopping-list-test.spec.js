@@ -1,4 +1,4 @@
-describe('ShoppingList', function(){
+describe('Shopping List', function(){
 
   var SL = null;
 
@@ -40,7 +40,7 @@ describe('ShoppingList', function(){
 
       it('addItem should only add shopping list items', function(){
         var SL1 = new ShoppingList();
-        expect(SL1.addItem.bind(SL1, 'not an item').to.throw(Error));
+        expect(SL1.addItem.bind(SL1, 'not an item')).to.throw(Error);
       });
 
       // it('should throw an error if argument is not a ShoppingListItem', function () {
