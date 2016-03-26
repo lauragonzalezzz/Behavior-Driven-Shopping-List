@@ -78,7 +78,9 @@ describe('Shopping List', function(){
         expect(SL.render).to.exist;
       });
 
-
+      it('should return a string', function(){
+        expect(SL.render()).to.be.a('string');
+      });
 
     }); //Ends Render Method
 
