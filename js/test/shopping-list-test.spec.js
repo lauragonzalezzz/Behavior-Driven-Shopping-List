@@ -83,7 +83,9 @@ describe('Shopping List', function(){
       });
 
       it('should return an HTML formatted string', function(){
-
+      var granola = new ShoppingListItem('granola', 'for hippies, and everyone else');
+      SL.addItem(granola);
+      expect(SL.render(granola.render())).to.equal("<ul><li class=\'completed_false\'><span>granola</span><span>for hippies, and everyone else</span></li></ul>")
       });
 
     }); //Ends Render Method
