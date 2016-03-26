@@ -25,9 +25,12 @@ var ShoppingList = function(){
   };
 
   this.render = function(){
-    var concatItems = new ShoppingListItem();
-    concatItems.render();
-    return concatItems.render();
+    var concatItems = '';
+
+    for (var i = 0; i < this.items.length; i++) {
+      concatItems += this.items[i].render();
+    }
+    return '<ul>' + concatItems + '</ul>';
   };
 
 };
