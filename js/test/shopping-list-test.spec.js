@@ -23,7 +23,7 @@ describe('Shopping List', function(){
 
     describe('Add Item', function(){
 
-      it('should have an addItem method', function(){
+      it('should exist', function(){
         expect(SL.addItem).to.exist;
       });
 
@@ -43,14 +43,19 @@ describe('Shopping List', function(){
         expect(SL1.addItem.bind(SL1, 'not an item')).to.throw(Error);
       });
 
-      // it('should throw an error if argument is not a ShoppingListItem', function () {
-      // expect(function () { SL.addItem('not an item'); }).to.throw(Error);
-      // });
+    }); //Ends Add Item Method
 
-    });
+    describe('Remove Item', function(){
+
+      it('removeItem should exist', function(){
+        expect(SL.removeItem).to.exist;
+      });
 
 
 
+    }); //Ends Remove Item Method
 
-  });
+
+
+  }); //Ends Methods
 });
