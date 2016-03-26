@@ -14,7 +14,7 @@ ShoppingListItem.prototype.uncheck = function(){
 };
 
 ShoppingListItem.prototype.render = function(){
-  var string = "\"<li class='completed_" + this.is_done + "\'><span>" + this.name + "</span><span>"+ this.description + "</span></li>\"";
+  var string = "<li class='completed_" + this.is_done + "\'><span>" + this.name + "</span><span>"+ this.description + "</span></li>";
   return string;
 
 };
