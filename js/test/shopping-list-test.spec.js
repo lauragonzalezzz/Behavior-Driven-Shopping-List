@@ -51,20 +51,19 @@ describe('Shopping List', function(){
         expect(SL.removeItem).to.exist;
       });
 
-      // it('should remove an item from the items array', function(){
-      //   var SL3 = new ShoppingList();
-      //   var carrots = new ShoppingListItem('carrots', 'are delicious!')
-      //   SL3.addItem(carrots);
-      //   expect(SL3.items).to.include(carrots);
-      //   SL3.removeItem(carrots);
-      //   expect(SL3.items).to.not.include(carrots);
-      // });
+      it('should remove an item from the items array', function(){
+        var SL3 = new ShoppingList();
+        var carrots = new ShoppingListItem('carrots', 'are delicious!')
+        SL3.addItem(carrots);
+        expect(SL3.items).to.include(carrots);
+        SL3.removeItem(carrots);
+        expect(SL3.items).to.not.include(carrots);
+      });
 
       it('should remove the last item from the items array', function(){
         var SL4 = new ShoppingList();
         var banana = new ShoppingListItem('banana', 'is yellow.');
         var cereal = new ShoppingListItem('cereal', 'is not always for breakfast.');
-
         SL4.addItem(banana);
         SL4.addItem(cereal);
         SL4.removeItem();
@@ -73,7 +72,15 @@ describe('Shopping List', function(){
 
     }); //Ends Remove Item Method
 
+    describe('Render Method', function(){
 
+      it('should exist', function(){
+        expect(SL.render).to.exist;
+      });
+
+
+
+    }); //Ends Render Method
 
   }); //Ends Methods
 });
