@@ -91,7 +91,7 @@ describe('ShoppingListItem', function() {
       var SL3 = new ShoppingListItem('Grapes', 'are happy little things');
       SL3.uncheck();
       it('should return an html formatted string with populated values', function(){
-        expect(SL3.render()).to.equal("<ul><li class='completed_false'><span>Grapes</span><span>are happy little things.</span></li><ul>");
+        expect(SL3.render()).to.equal("\"<li class='completed_false'><span>Grapes</span><span>are happy little things</span></li>\"");
       });
 
 

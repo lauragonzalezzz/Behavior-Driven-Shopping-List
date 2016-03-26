@@ -82,6 +82,10 @@ describe('Shopping List', function(){
         expect(SL.render()).to.be.a('string');
       });
 
+      it('should return an HTML formatted string', function(){
+
+      });
+
     }); //Ends Render Method
 
   }); //Ends Methods

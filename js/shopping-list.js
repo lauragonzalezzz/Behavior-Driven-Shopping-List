@@ -16,7 +16,6 @@ var ShoppingList = function(){
       return;
     }
     var index = this.items.indexOf(item);
-    console.log('index',index);
     if (index === -1) {
       throw new Error('Not in the shopping list.');
     }
@@ -26,6 +25,9 @@ var ShoppingList = function(){
   };
 
   this.render = function(){
-    return '';
+    var concatItems = new ShoppingListItem();
+    concatItems.render();
+    return concatItems.render();
   };
+
 };

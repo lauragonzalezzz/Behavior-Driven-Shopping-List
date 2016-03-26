@@ -14,6 +14,7 @@ ShoppingListItem.prototype.uncheck = function(){
 };
 
 ShoppingListItem.prototype.render = function(){
-  return "<ul><li class='completed_false'"+"><span>"+"Grapes"+"</span><span>"+"are happy little things."+"</span></li><ul>";
+  var string = "\"<li class='completed_" + this.is_done + "\'><span>" + this.name + "</span><span>"+ this.description + "</span></li>\"";
+  return string;
 
 };
