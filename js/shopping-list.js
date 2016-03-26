@@ -24,4 +24,6 @@ var ShoppingList = function(){
       this.items.splice(index, 1);
     };
   };
+
+  this.render = function(){};
 };
