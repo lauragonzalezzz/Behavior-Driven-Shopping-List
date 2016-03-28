@@ -4,20 +4,11 @@ var form = document.getElementById('form');
 form.addEventListener('click', function(event) {
   event.preventDefault();
 });
-  // var checkboxList = document.getElementsByClassName('checkbox');
-  // console.log('checkboxList',checkboxList);
-  // checkboxList.forEach(addEventListener('click', function(e){
-  //   console.log('hello');
-  // }));
+
 var idx = 0;
 function add_to_shopping_list() {
   var title = document.getElementById('title').value;
   var description = ' ' + document.getElementById('description').value;
-  // var checkbox = document.createElement('input');
-  // checkbox.id = title;
-  // checkbox.addEventListener('onchange', changeCheckedStatus(idx, checkbox));
-
-
 
   var new_shopping_list_item = new ShoppingListItem(title, description);
 
@@ -26,7 +17,6 @@ function add_to_shopping_list() {
   var myList = myShoppingList.render();
   var contentDiv = document.getElementById('content')
   contentDiv.innerHTML = myList;
-  // contentDiv.appendChild(checkbox);
   return;
 };
 
