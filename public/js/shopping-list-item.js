@@ -15,16 +15,8 @@ ShoppingListItem.prototype.uncheck = function(){
 
 ShoppingListItem.prototype.render = function(){
   var idx = myShoppingList.items.indexOf(this);
-  // var checkbox = document.createElement('input');
-  // checkbox.id="checkbox" + idx;
-  // checkbox.type ="checkbox";
-  // checkbox.addEventListener('click', function(){
-  //   console.log('hello');
-  // });
+
   checkboxElement = "<input id='checkbox" + idx + "' type='checkbox' onclick='console.log(\"hello\")'>";
-
-  console.log('checkboxElement',checkboxElement);
-
   var string = "<li class='completed_" + this.is_done + "\'>" + checkboxElement + "<span>" + this.name + "</span><span>"+ this.description + "</span></li>";
   return string;
 
