@@ -31,3 +31,9 @@ function changeCheckedStatus(idx, checkbox) {
   item.uncheck();
   }
 };
+
+function removeItemButtonClicked(idx) {
+  item = myShoppingList.items[idx];
+  myShoppingList.removeItem(item);
+  displayList();
+};
