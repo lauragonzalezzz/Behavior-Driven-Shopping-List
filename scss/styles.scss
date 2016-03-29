@@ -86,10 +86,11 @@ header h1 a{
   padding: 10px;
   color: $primary-color;
   margin: 0 auto;
-  border: 1px solid red;
-  width: 75%;
-  display: block;
-
+  width: 30%;
+  border: 1px solid black;
+  form{
+    border:5px dotted white;
+  }
 
   h2{
     display: inline-block;
@@ -116,9 +117,15 @@ input{
 }
 
 #buttonDiv{
-  border: 5px solid green;
-  width: 30%;
+  width: 90%;
   margin: 0 auto;
+  padding: 10px;
+}
+
+.textFields{
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
 }
 
   #add_shopping_list_item_button{
@@ -136,3 +143,27 @@ input{
     }
   }
 }
+
+#content{
+  font-family: arial;
+  font-size: 20px;
+  margin: 20px;
+
+  li{
+    text-decoration: line-through;
+    border: 1px dotted $primary-color;
+    width: 350px;
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  li.completed_false{
+    text-decoration: none;
+  }
+
+  #trashBtn{
+    background-color: pink;
+    float: right;
+  }
+}
+
