@@ -18,7 +18,6 @@ function add_to_shopping_list() {
 
   myShoppingList.addItem(new_shopping_list_item);
   displayList();
-
   return;
 };
 
