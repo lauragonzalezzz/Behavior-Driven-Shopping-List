@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url(https://fonts.googleapis.com/css?family=Lobster+Two:400,400italic);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,7 +47,8 @@ table {
   border-spacing: 0; }
 
 body {
-  font-family: 'Slabo 27px', serif; }
+  background-color: seashell;
+  font-family: 'Lobster Two', cursive; }
 
 a {
   text-decoration: none; }
@@ -55,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left; }
 
 header {
-  border-bottom: 2px solid #ccc; }
+  border-bottom: 2px dotted #b300b3; }
   header h1 {
     padding: 30px;
     text-align: center;
@@ -84,10 +86,14 @@ header h1 a {
 
 .container {
   padding: 10px;
-  color: purple; }
+  color: purple;
+  margin: 0 auto;
+  border: 1px solid red;
+  width: 75%;
+  display: block; }
   .container h2 {
     display: inline-block;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid seashell;
     font-size: 28px; }
   .container p {
     padding: 10px 0px; }
@@ -97,3 +103,22 @@ header h1 a {
     @media only screen and (min-width: 800px) {
       .container p {
         font-size: 24px; } }
+  .container input {
+    background-color: floralwhite;
+    font-size: 30px;
+    margin: 0 auto; }
+  .container #buttonDiv {
+    border: 5px solid green;
+    width: 30%;
+    margin: 0 auto; }
+  .container #add_shopping_list_item_button {
+    background-color: #ffe6ff;
+    color: purple;
+    font-family: arial;
+    font-size: 25px;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto; }
+    .container #add_shopping_list_item_button:hover {
+      color: #e600e6;
+      transition: all 0.2s ease; }
