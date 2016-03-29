@@ -27,8 +27,9 @@ function changeCheckedStatus(idx, checkbox) {
   else {
   item.uncheck();
   }
-  // var myList = myShoppingList.render();
-  // var contentDiv = document.getElementById('content')
-  // contentDiv.innerHTML = myList;
+
+  var myList = myShoppingList.render();
+  var contentDiv = document.getElementById('content')
+  contentDiv.innerHTML = myList;
   return;
 };
