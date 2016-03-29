@@ -17,8 +17,8 @@ ShoppingListItem.prototype.render = function(){
   var idx = myShoppingList.items.indexOf(this);
 
   checkboxElement = "<input id='checkbox" + idx + "' type='checkbox' onchange='changeCheckedStatus(" + idx +", event.target)'>";
-  buttonElement = "<button onclick='removeItemButtonClicked(" + idx + ")'>X</<button>";
-  var string = "<li class='completed_" + this.is_done + "\'>" + checkboxElement + "<span>" + this.name + "</span><span>"+ this.description + "</span><span>" + buttonElement + "</span></li>";
+  buttonElement = "<button id='trashBtn' onclick='removeItemButtonClicked(" + idx + ")'>X</<button>";
+  var string = "<li class='completed_" + this.is_done + "\'>" + checkboxElement + "<span>" + this.name + ": </span><span>"+ this.description + " </span><span>" + buttonElement + "</span></li>";
 
   return string;
 };
