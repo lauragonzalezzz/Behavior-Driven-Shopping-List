@@ -9,7 +9,6 @@ var idx = 0;
 function add_to_shopping_list() {
   var title = document.getElementById('title').value;
   var description = ' ' + document.getElementById('description').value;
-
   var new_shopping_list_item = new ShoppingListItem(title, description);
 
   myShoppingList.addItem(new_shopping_list_item);
@@ -22,5 +21,14 @@ function add_to_shopping_list() {
 
 function changeCheckedStatus(idx, checkbox) {
   var item = myShoppingList.items[idx];
-  console.log('myShoppingList.items',myShoppingList.items);
+  if (checkbox.checked === true) {
+    item.check();
+  }
+  else {
+  item.uncheck();
+  }
+  // var myList = myShoppingList.render();
+  // var contentDiv = document.getElementById('content')
+  // contentDiv.innerHTML = myList;
+  return;
 };
