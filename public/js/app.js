@@ -5,19 +5,26 @@ form.addEventListener('click', function(event) {
   event.preventDefault();
 });
 
-var idx = 0;
+function displayList(){
+  var myList = myShoppingList.render();
+  var contentDiv = document.getElementById('content')
+  contentDiv.innerHTML = myList;
+};
+
 function add_to_shopping_list() {
   var title = document.getElementById('title').value;
   var description = ' ' + document.getElementById('description').value;
   var new_shopping_list_item = new ShoppingListItem(title, description);
 
   myShoppingList.addItem(new_shopping_list_item);
-
+  // displayList();
   var myList = myShoppingList.render();
   var contentDiv = document.getElementById('content')
   contentDiv.innerHTML = myList;
   return;
 };
+
+
 
 function changeCheckedStatus(idx, checkbox) {
   var item = myShoppingList.items[idx];
@@ -27,9 +34,4 @@ function changeCheckedStatus(idx, checkbox) {
   else {
   item.uncheck();
   }
-
-  var myList = myShoppingList.render();
-  var contentDiv = document.getElementById('content')
-  contentDiv.innerHTML = myList;
-  return;
 };

@@ -34,4 +34,3 @@ var ShoppingList = function(){
   };
 
 };
-hello
