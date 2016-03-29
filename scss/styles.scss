@@ -1,6 +1,7 @@
 
 // PARTIALS
 @import "partials/reset";
+@import url(https://fonts.googleapis.com/css?family=Lobster+Two:400,400italic);
 
 // MIXINS
 
@@ -24,14 +25,14 @@ $breakpoints: (
 
 // VARIABLES
 $primary-color: purple;
-$secondary-color: #ccc;
+$secondary-color: seashell;
 
 
 // STYLES
 
 body {
-  // background-color: $primary-color;
-  font-family: 'Slabo 27px', serif;
+  background-color: $secondary-color;
+  font-family: 'Lobster Two', cursive;
 }
 
 a{
@@ -45,7 +46,7 @@ h1, h2, h3, h4 ,h5, h6{
 // HEADER
 
 header {
-  border-bottom: 2px solid $secondary-color;
+  border-bottom: 2px dotted lighten($primary-color, 10%);
   h1 {
     padding: 30px;
     text-align: center;
@@ -84,6 +85,11 @@ header h1 a{
 .container {
   padding: 10px;
   color: $primary-color;
+  margin: 0 auto;
+  border: 1px solid red;
+  width: 75%;
+  display: block;
+
 
   h2{
     display: inline-block;
@@ -100,6 +106,33 @@ header h1 a{
 
     @include respond-to('large') {
       font-size: 24px;
+    }
+  }
+
+input{
+  background-color: floralwhite;
+  font-size: 30px;
+  margin: 0 auto;
+}
+
+#buttonDiv{
+  border: 5px solid green;
+  width: 30%;
+  margin: 0 auto;
+}
+
+  #add_shopping_list_item_button{
+    background-color: lighten($primary-color, 70%);
+    color: $primary-color;
+    font-family: arial;
+    font-size: 25px;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+
+    &:hover{
+    color: lighten($primary-color, 20%);
+    transition: all 0.2s ease;
     }
   }
 }
