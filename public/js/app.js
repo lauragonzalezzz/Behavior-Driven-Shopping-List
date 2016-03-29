@@ -17,14 +17,10 @@ function add_to_shopping_list() {
   var new_shopping_list_item = new ShoppingListItem(title, description);
 
   myShoppingList.addItem(new_shopping_list_item);
-  // displayList();
-  var myList = myShoppingList.render();
-  var contentDiv = document.getElementById('content')
-  contentDiv.innerHTML = myList;
+  displayList();
+
   return;
 };
-
-
 
 function changeCheckedStatus(idx, checkbox) {
   var item = myShoppingList.items[idx];
