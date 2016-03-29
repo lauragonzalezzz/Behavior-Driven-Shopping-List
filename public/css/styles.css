@@ -88,9 +88,10 @@ header h1 a {
   padding: 10px;
   color: purple;
   margin: 0 auto;
-  border: 1px solid red;
-  width: 75%;
-  display: block; }
+  width: 30%;
+  border: 1px solid black; }
+  .container form {
+    border: 5px dotted white; }
   .container h2 {
     display: inline-block;
     border-bottom: 1px solid seashell;
@@ -108,9 +109,13 @@ header h1 a {
     font-size: 30px;
     margin: 0 auto; }
   .container #buttonDiv {
-    border: 5px solid green;
-    width: 30%;
-    margin: 0 auto; }
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px; }
+  .container .textFields {
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px; }
   .container #add_shopping_list_item_button {
     background-color: #ffe6ff;
     color: purple;
@@ -122,3 +127,19 @@ header h1 a {
     .container #add_shopping_list_item_button:hover {
       color: #e600e6;
       transition: all 0.2s ease; }
+
+#content {
+  font-family: arial;
+  font-size: 20px;
+  margin: 20px; }
+  #content li {
+    text-decoration: line-through;
+    border: 1px dotted purple;
+    width: 350px;
+    margin: 0 auto;
+    padding: 5px; }
+  #content li.completed_false {
+    text-decoration: none; }
+  #content #trashBtn {
+    background-color: pink;
+    float: right; }
