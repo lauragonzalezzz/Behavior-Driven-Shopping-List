@@ -16,8 +16,7 @@ ShoppingListItem.prototype.uncheck = function(){
 ShoppingListItem.prototype.render = function(){
   var idx = myShoppingList.items.indexOf(this);
 
-  checkboxElement = "<input id='checkbox" + idx + "' type='checkbox' onclick='console.log(\"hello\")'>";
+  checkboxElement = "<input id='checkbox" + idx + "' type='checkbox' onchange='changeCheckedStatus(idx, event.target)'>";
   var string = "<li class='completed_" + this.is_done + "\'>" + checkboxElement + "<span>" + this.name + "</span><span>"+ this.description + "</span></li>";
   return string;
-
 };
