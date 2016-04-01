@@ -53,9 +53,6 @@ body {
 a {
   text-decoration: none; }
 
-h1, h2, h3, h4, h5, h6 {
-  text-align: left; }
-
 header {
   border-bottom: 2px dotted #b300b3; }
   header h1 {
@@ -76,7 +73,7 @@ header h1 a {
   header h1 a:hover {
     color: #e600e6;
     transition: all 0.2s ease;
-    font-size: 72px; }
+    font-size: 35px; }
     @media only screen and (min-width: 500px) {
       header h1 a:hover {
         font-size: 45px; } }
@@ -87,42 +84,29 @@ header h1 a {
 .container {
   padding: 10px;
   color: purple;
-  margin: 0 auto;
-  width: 30%; }
+  margin: 0 auto; }
   .container form {
-    border: 5px dotted white; }
-  .container h2 {
-    display: inline-block;
-    border-bottom: 1px solid seashell;
-    font-size: 28px; }
-  .container p {
-    padding: 10px 0px; }
-    @media only screen and (min-width: 500px) {
-      .container p {
-        font-size: 22px; } }
-    @media only screen and (min-width: 800px) {
-      .container p {
-        font-size: 24px; } }
+    border: 5px dotted white;
+    padding: 10px;
+    display: flex;
+    flex-wrap: row wrap;
+    flex-direction: row;
+    justify-content: center; }
   .container input {
     background-color: floralwhite;
     font-size: 30px;
-    margin: 0 auto; }
-  .container #buttonDiv {
-    width: 90%;
-    margin: 0 auto;
-    padding: 10px; }
-  .container .textFields {
-    width: 70%;
-    margin: 0 auto;
-    padding: 10px; }
+    flex: 0 1 auto;
+    margin: 10px; }
+    .container input:hover {
+      font-size: 32px;
+      transition: all 0.5s ease; }
   .container #add_shopping_list_item_button {
     background-color: #ffe6ff;
     color: purple;
     font-family: arial;
     font-size: 25px;
     border-radius: 5px;
-    display: block;
-    margin: 0 auto; }
+    flex: 0 0 auto; }
     .container #add_shopping_list_item_button:hover {
       color: #e600e6;
       transition: all 0.2s ease; }
@@ -137,8 +121,11 @@ header h1 a {
     width: 350px;
     margin: 0 auto;
     padding: 5px; }
+    #content li:hover {
+      font-size: 22px;
+      transition: all 0.5s ease; }
   #content li.completed_false {
     text-decoration: none; }
   #content #trashBtn {
-    background-color: pink;
+    background-color: #ffcdff;
     float: right; }

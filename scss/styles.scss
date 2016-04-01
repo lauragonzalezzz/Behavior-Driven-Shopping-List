@@ -39,9 +39,6 @@ a{
   text-decoration: none;
 }
 
-h1, h2, h3, h4 ,h5, h6{
-  text-align: left;
-}
 
 // HEADER
 
@@ -70,7 +67,7 @@ header h1 a{
   &:hover{
     color: lighten($primary-color, 20%);
     transition: all 0.2s ease;
-    font-size: 72px;
+    font-size: 35px;
 
     @include respond-to('medium') {
       font-size: 45px;
@@ -86,45 +83,26 @@ header h1 a{
   padding: 10px;
   color: $primary-color;
   margin: 0 auto;
-  width: 30%;
+
   form{
     border:5px dotted white;
-  }
-
-  h2{
-    display: inline-block;
-    border-bottom: 1px solid $secondary-color;
-    font-size: 28px;
-  }
-
-  p{
-    padding: 10px 0px;
-
-    @include respond-to('medium') {
-      font-size: 22px;
-    }
-
-    @include respond-to('large') {
-      font-size: 24px;
-    }
+    padding: 10px;
+    display: flex;
+    flex-wrap: row wrap;
+    flex-direction: row;
+    justify-content: center;
   }
 
 input{
   background-color: floralwhite;
   font-size: 30px;
-  margin: 0 auto;
-}
+  flex: 0 1 auto;
+  margin: 10px;
 
-#buttonDiv{
-  width: 90%;
-  margin: 0 auto;
-  padding: 10px;
-}
-
-.textFields{
-  width: 70%;
-  margin: 0 auto;
-  padding: 10px;
+  &:hover{
+    font-size: 32px;
+    transition: all 0.5s ease;
+  }
 }
 
   #add_shopping_list_item_button{
@@ -133,8 +111,7 @@ input{
     font-family: arial;
     font-size: 25px;
     border-radius: 5px;
-    display: block;
-    margin: 0 auto;
+    flex: 0 0 auto;
 
     &:hover{
     color: lighten($primary-color, 20%);
@@ -154,6 +131,11 @@ input{
     width: 350px;
     margin: 0 auto;
     padding: 5px;
+
+    &:hover{
+      font-size: 22px;
+      transition: all 0.5s ease;
+    }
   }
 
   li.completed_false{
@@ -161,7 +143,7 @@ input{
   }
 
   #trashBtn{
-    background-color: pink;
+    background-color: lighten($primary-color, 65%);
     float: right;
   }
 }
